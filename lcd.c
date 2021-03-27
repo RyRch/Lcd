@@ -39,7 +39,7 @@ main(int ac, char **av)
 
     fill_struct(&lcd, av[1]);
     if (av[1] == NULL
-            || av[1][0] < '1' && av[1][0] > '9')
+            || av[1][0] < '0' && av[1][0] > '9')
         return 84;
     lcd_format(&lcd);
     return 0;
