@@ -1,14 +1,13 @@
 #include <string.h>
 #include <stdio.h>
 
-typedef struct
+typedef struct 
 {
     char digits[3][30];
     char list[];
 } format_t;
 
-static void
-fill_struct(format_t *lcd, char *av)
+static void fill_struct(format_t *lcd, char *av)
 {
     strcpy(lcd->digits[0], " _     _  _     _  _ _   _  _ ");
     strcpy(lcd->digits[1], "| | |  _| _||_||_ |_  | |_||_|");
@@ -17,8 +16,7 @@ fill_struct(format_t *lcd, char *av)
     strcpy(lcd->list, av);
 }
 
-static void
-lcd_format(format_t *lcd)
+static void lcd_format(format_t *lcd)
 {
     int nb_list;
 
@@ -32,8 +30,7 @@ lcd_format(format_t *lcd)
     }
 }
 
-int 
-main(int ac, char **av)
+int main(int ac, char **av)
 {
     format_t lcd;
 
